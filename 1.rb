@@ -1,16 +1,17 @@
-# Solution A:
-changes = File.readlines('./input_1.txt')
-resulting_frequency = changes.map(&:to_i).reduce(:+)
-puts "Solution to 1A: #{resulting_frequency}"
+module Day1
+  def self.problem_a(changes)
+    changes.reduce(:+)
+  end
 
-# Solution B:
-changes = File.readlines('./input_1.txt').map(&:to_i).cycle
-found_frequencies = Hash.new(0)
-frequence = 0
-found_frequencies[0] = 1
-until found_frequencies[frequence] >= 2 do
-  frequence += changes.next
-  found_frequencies[frequence] += 1
+  def self.problem_b(changes)
+    changes = changes.cycle
+    found_frequencies = Hash.new(0)
+    frequency = 0
+    found_frequencies[0] = 1
+    until found_frequencies[frequency] >= 2 do
+      frequency += changes.next
+      found_frequencies[frequency] += 1
+    end
+    frequency
+  end
 end
-
-puts "Solution to 1B: #{frequence}"
