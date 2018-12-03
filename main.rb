@@ -13,4 +13,4 @@ puts "Solution to 2B: #{Day2.problem_b(input2)}"
 
 input3 = File.readlines('./input_3.txt')
 puts "Solution to 3A: #{Day3.problem_a(input3)}"
-# puts "Solution to 3B: #{Day3.problem_b(input3)}"
+puts "Solution to 3B: #{Day3.problem_b(input3)}"

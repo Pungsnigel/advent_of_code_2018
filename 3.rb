@@ -13,7 +13,12 @@ module Day3
       overlaps.uniq.count
     end
 
-    def problem_b
+    def problem_b(unparsed_suggestions)
+      suggestions = parse_suggestions(unparsed_suggestions)
+      suggestion = suggestions.find do |suggestion|
+        suggestions.all? { |other| other.id == suggestion.id || !suggestion.intersects?(other) } 
+      end
+      suggestion&.id
     end
 
     private
