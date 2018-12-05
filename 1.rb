@@ -4,14 +4,13 @@ module Day1
   end
 
   def self.problem_b(changes)
-    changes = changes.cycle
     found_frequencies = Hash.new(0)
     frequency = 0
     found_frequencies[0] = 1
-    until found_frequencies[frequency] >= 2 do
-      frequency += changes.next
+    changes.cycle do |change|
+      frequency += change
       found_frequencies[frequency] += 1
+      return frequency if found_frequencies[frequency] >= 2
     end
-    frequency
   end
 end
