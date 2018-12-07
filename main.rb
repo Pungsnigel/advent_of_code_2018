@@ -21,6 +21,6 @@ input4 = File.readlines('./input_4.txt')
 puts "Solution to 4A: #{Day4.problem_a(input4)}"
 puts "Solution to 4B: #{Day4.problem_b(input4)}"
 
-input5 = File.read('./input_5.txt')
+input5 = File.read('./input_5.txt').chomp
 puts "Solution to 5A: #{Day5.problem_a(input5)}"
 # puts "Solution to 5B: #{Day5.problem_b(input5)}"
