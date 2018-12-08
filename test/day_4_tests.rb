@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative('../4')
+require_relative('../solutions/4')
 
 class Day4Tests < Minitest::Test
   LOG_ENTRIES = [

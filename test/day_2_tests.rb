@@ -1,5 +1,5 @@
 require "minitest/autorun"
-require_relative("../2")
+require_relative('../solutions/2')
 
 class Day2Tests < Minitest::Test
   def test_day_2_solution_a
