@@ -1,11 +1,11 @@
 module Day5
   class << self
     def problem_a(polymer)
-      trim(polymer.chars).size
+      trim(polymer.join.chomp.chars).size
     end
 
     def problem_b(polymer)
-      original_trimmed_chars = trim(polymer.chars)
+      original_trimmed_chars = trim(polymer.join.chomp.chars)
       most_problematic_type = ('a'..'z').min_by do |char|
         chars = original_trimmed_chars.clone
         delete_type(char, chars)

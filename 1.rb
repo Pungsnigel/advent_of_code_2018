@@ -1,9 +1,10 @@
 module Day1
   def self.problem_a(changes)
-    changes.reduce(:+)
+    changes.map(&:to_i).reduce(:+)
   end
 
   def self.problem_b(changes)
+    changes = changes.map(&:to_i)
     found_frequencies = Hash.new(0)
     frequency = 0
     found_frequencies[0] = 1
