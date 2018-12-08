@@ -10,7 +10,7 @@ class Day5Tests < Minitest::Test
     assert_equal(10, Day5.problem_a('dabAcCaCBAcCcaDA'))
   end
 
-  # def test_day_5_solution_b
-  #   assert_equal('#3', Day5.problem_b)
-  # end
+  def test_day_5_solution_b
+    assert_equal(4, Day5.problem_b('dabAcCaCBAcCcaDA'))
+  end
 end

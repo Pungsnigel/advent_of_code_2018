@@ -23,4 +23,4 @@ puts "Solution to 4B: #{Day4.problem_b(input4)}"
 
 input5 = File.read('./input_5.txt').chomp
 puts "Solution to 5A: #{Day5.problem_a(input5)}"
-# puts "Solution to 5B: #{Day5.problem_b(input5)}"
+puts "Solution to 5B: #{Day5.problem_b(input5)}"

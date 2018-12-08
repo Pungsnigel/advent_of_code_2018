@@ -4,7 +4,21 @@ module Day5
       trim(polymer.chars).size
     end
 
-    def problem_b
+    def problem_b(polymer)
+      original_trimmed_chars = trim(polymer.chars)
+      most_problematic_type = ('a'..'z').min_by do |char|
+        chars = original_trimmed_chars.clone
+        delete_type(char, chars)
+        trim(chars).count
+      end
+      chars = original_trimmed_chars.clone
+      delete_type(most_problematic_type, chars)
+      trim(chars).count
+    end
+
+    def delete_type(type, chars)
+      chars.delete(type)
+      chars.delete(type.upcase)
     end
 
     def trim(chars)
