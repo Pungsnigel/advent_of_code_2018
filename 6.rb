@@ -20,7 +20,17 @@ module Day6
       closest.count(best_coordinate)
     end
 
-    def problem_b
+    def problem_b(coordinates, allowed_distance = 10000)
+      coordinates = coordinates.map do |string|
+        x, y = string.split(', ').map(&:to_i)
+        { x: x, y: y }
+      end
+
+      measured_coordinates(coordinates)
+        .keep_if do |c|
+          coordinates.sum { |c2| manhattan_distance(c, c2) }  < allowed_distance
+        end
+        .count
     end
 
     private
