@@ -18,6 +18,6 @@ class Day7Tests < Minitest::Test
   end
 
   def test_day_7_solution_b
-    assert_equal(15, Day7.problem_b(INSTRUCTIONS, 15, 2))
+    assert_equal(15, Day7.problem_b(INSTRUCTIONS, 0, 2))
   end
 end
