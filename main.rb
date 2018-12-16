@@ -1,6 +1,6 @@
 require 'benchmark'
 
-SOLVED_DAYS = (1..7).freeze
+SOLVED_DAYS = (1..8).freeze
 
 SOLVED_DAYS.each do |day|
   require_relative "solutions/#{day}"
@@ -9,7 +9,7 @@ end
 solution = nil
 Benchmark.bm do |benchmark|
   SOLVED_DAYS.each do |day|
-    ['a', 'b'].each do |problem|
+    %w[a b].each do |problem|
       puts "#{day}#{problem}:"
       klass = Object.const_get("Day#{day}")
       benchmark.report do
